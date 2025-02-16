@@ -1,0 +1,633 @@
+/* Основные стили */
+body {
+    background-color: #111111;
+    margin: 0;
+   
+}
+
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+
+
+
+/* Шапка */
+.header {
+    font-family: 'K2D', sans-serif;
+    background-color: #164C8A;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box; /* Учитываем паддинг в расчете ширины */
+}
+
+/* Логотип */
+.logo {
+    flex: 0 0 auto; /* Логотип фиксированного размера */
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Меню */
+.nav {
+    display: flex;
+    gap: 100px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+/* Кнопки меню */
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* Подсветка ссылок при наведении */
+.nav a:hover {
+    text-decoration: underline;
+}
+
+
+.currentMenu {
+    font-size: 15px !important;
+    font-weight: bold !important;
+    color: #F54A4A !important;
+    align-items: center !important;
+}
+
+
+
+
+
+
+
+.navCart a {
+    display: block; /* Всегда отображать */
+    text-decoration: none; /* Убираем подчеркивание */
+    color: white; /* Цвет текста */
+    font-weight: bold;
+}
+
+.navCart {
+    display: flex; /* Устанавливаем flex для навигации */
+    justify-content: center; /* Центрируем */
+    align-items: center;
+}
+/* Подсветка ссылок при наведении */
+.navCart a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+/* Меню языка */
+.language-menu {
+    display: none;
+    position: absolute;
+    background-color: rgba(34, 34, 34, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    top: 30px;
+    right: 0;
+}
+
+.language-menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+}
+
+.language-menu a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+  
+
+
+/* Бургер-меню */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.burger div {
+    background-color: white;
+    height: 5px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+
+
+
+/* Медиазапросы для адаптивности */
+@media screen and (max-width: 1024px) {
+    .nav {
+        gap: 50px; /* Уменьшаем расстояние между пунктами */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        display: none; /* Скрываем меню по умолчанию */
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        background-color: #164C8A;
+        top: 60px; /* Позиционируем меню */
+        right: 0;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .burger {
+        display: flex; /* Показываем бургер-меню на маленьких экранах */
+    }
+
+    .nav.active {
+        display: flex; /* Показываем меню при активации бургер-меню */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.imgAbout {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 3px;
+}
+
+.containerAbout{
+
+        position: relative; /* Родительский контейнер для абсолютного позиционирования */
+        width: 100%;
+    
+}
+
+
+
+.plateAboutInfo{
+     position: absolute;
+    top: 3%;  /* Смещение вниз на 20% */
+    left: 3%; /* Центрируем по горизонтали */
+    width: 95%;
+    height: auto;
+ 
+    
+
+}
+.plateAboutIcons{
+    position: absolute;
+    top: 6%;  /* Смещение вниз на 20% */
+    right: 10%;
+    width: 30%;
+    height: auto;
+}
+.textAbout{
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    left: 4%;
+    top: 4%;  
+    width: 50%;
+}
+@media (max-width: 768px) {
+    .textAbout {
+        font-size: 14px; /* Уменьшаем шрифт при ширине экрана меньше 768px */
+    }
+}
+
+@media (max-width: 480px) {
+    .textAbout {
+        font-size: 10px; /* Еще меньше шрифт для очень узких экранов */
+    }
+}
+
+
+
+
+
+
+.imgContainerInfo{
+    position: relative; /* Родительский контейнер для абсолютного позиционирования */
+    width: 100%;
+}
+
+
+.imgInfo{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 3px;
+
+}
+.delivery2{
+    display: block;
+    width: 100%;
+    height: auto;  
+}
+
+.uzbekIcons{
+    position: absolute;
+    right: 8%;
+    top: 10%;
+    width: 30%;
+}
+.plateContacts{
+    position: absolute;
+    right: 8%;
+    top: 3%;
+    width: 30%;
+}
+.plateInfoDelivery{
+    position: absolute;
+    left: 3%;
+    top: 3%;
+    width: 35%;
+    height: 100%;
+}
+.textDelivery {
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    left: 4%;
+    top: 1%;  
+    width: 33%;
+}
+.contactsPlate{
+    font-family: 'K2D', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    padding: 2px;
+    border-radius: 20px; /* Скругленные углы */
+    height: auto; /* Высота адаптируется к содержимому */
+    border: 0.1px solid white; 
+    background-color: rgba(0, 0, 0, 0.5);
+    word-wrap: break-word; /* Перенос слов для длинных строк */
+    text-align: center; /* Центрирование текста */
+    position: absolute;
+    right: 8%;
+    top: 3%;
+    width: 30%;
+
+    display: flex; /* Используем flex для выравнивания текста */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.telegramLinlForContacts{
+    display: flex; /* Выстраиваем иконку и текст в строку */
+    align-items: center; /* Центрируем элементы по вертикали */
+    text-decoration: none; /* Убираем подчеркивание */
+    color: white; /* Белый текст */
+    font-size: 14px; /* Уменьшенный размер текста */
+    font-weight: bold; /* Жирный текст */
+    box-shadow: #111111;
+    margin-bottom: 10px; /* Отступ между элементами */
+}
+
+
+@media (max-width: 768px) {
+    .textDelivery {
+        font-size: 14px; /* Уменьшаем шрифт при ширине экрана меньше 768px */
+    }
+}
+
+@media (max-width: 480px) {
+    .textDelivery {
+        font-size: 10px; /* Еще меньше шрифт для очень узких экранов */
+    }
+}
+
+
+
+
+
+
+.language-menu {
+    display: none; /* Изначально скрываем */
+    position: absolute; /* Открепляем от потока документа */
+    top: 100%; /* Размещаем под кнопкой "Language" */
+    left: 0;
+    background: white; /* Цвет фона */
+    opacity: 80%;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Поднимаем над остальными элементами */
+    min-width: 120px; /* Фиксируем ширину */
+}
+
+.language-menu a {
+    display: block;
+    padding: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.language-menu a:hover {
+    background: #f0f0f0;
+}
+
+/* Добавляем позиционирование для родителя */
+.nav {
+    position: relative;
+}
+
+
+
+
+
+
+
+
+/* Каталог товаров */
+.containerCatalog {
+    font-family: 'K2D', sans-serif;
+    padding: 20px;
+    text-align: center;
+    background-image: url(../ASSETS/bg.jpg);
+}
+
+.containerCatalog h1 {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+/* Сетка товаров */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* По умолчанию 3 колонки */
+    gap: 20px;
+    padding: 10px; /* Добавлен небольшой отступ вокруг сетки */
+}
+
+/* Карточки товара */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Выравнивание контента сверху */
+    text-align: center;
+    background-color :rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    /*border: 1px solid #ddd;*/
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Карточка будет занимать всю доступную ширину */
+    height: 100%; /* Обеспечивает равномерную высоту карточки */
+    box-sizing: border-box;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto; /* Сохранение пропорций изображения */
+    object-fit: cover; /* Обеспечивает заполняемость картинки без искажений */
+    border-radius: 10px; /* Радиус углов для картинок */
+}
+
+.product-card h2 {
+    font-size: 22px;
+    color: white;
+    margin: 15px 0 10px; /* Отступ сверху и снизу для заголовка */
+}
+
+.product-card p {
+    font-size: 16px;
+    color: white;
+    margin: 0 0 10px; /* Отступ снизу для описания */
+}
+
+.product-card strong {
+    font-size: 18px;
+    color: white;
+}
+
+/* Медиазапросы для адаптивности */
+@media screen and (max-width: 1024px) {
+    .catalog-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки для экранов меньше 1024px */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .catalog-grid {
+        grid-template-columns: 1fr; /* 1 колонка для экранов меньше 768px */
+    }
+}
+
+
+
+
+
+
+.order-plate-text {
+    text-align: center;
+    background-image: url(/ASSETS/berries.jpg);
+    border-radius: 20px; /* Закругленные углы */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    margin: 20px 0;
+    width: 100%; /* Занимает всю ширину контейнера */
+    height: 150px;
+    box-sizing: border-box; /* Учитываем паддинги */
+    padding: 10px 0; /* Внутренний отступ для всего контейнера */
+    display: flex; /* Используем flex для выравнивания текста */
+    justify-content: right;
+    align-items: center;
+}
+
+.order-plate-inner-text {
+    font-family: 'K2D', sans-serif;
+    font-size: 14px;
+    width: 60%;
+    font-weight: bold;
+    color: white;
+    padding: 2px;
+    border-radius: 20px; /* Скругленные углы */
+    height: auto; /* Высота адаптируется к содержимому */
+    border: 3px solid white; /* Красная обводка */
+    background-color: rgba(0, 0, 0, 0.6);
+    word-wrap: break-word; /* Перенос слов для длинных строк */
+    text-align: center; /* Центрирование текста */
+    margin-right: 20px;
+}
+
+
+
+
+
+
+
+
+.add-to-cart {
+    cursor: pointer;
+    width: 50px !important; 
+    height:50px !important;
+}
+
+.add-to-cart:hover {
+    opacity: 0.7;
+}
+
+/* Стили для контейнера корзины */
+#cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для отдельных товаров */
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 0.1px solid #ccc;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+}
+
+/* Стили для изображения товара */
+.cart-item img {
+    width: 80px; /* Уменьшение размера */
+    height: 80px;
+    border-radius: 5px;
+    object-fit: cover; /* Чтобы изображение заполняло пространство */
+}
+
+/* Стили для текста товара */
+.cart-item p {
+    margin: 0;
+    color: white;
+    flex-grow: 1; /* Чтобы текст растягивался, занимая оставшееся пространство */
+}
+
+/* Стили для кнопки удаления */
+.cart-item button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cart-item button:hover {
+    background-color: #c9302c;
+}
+
+
+#cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: url('/ASSETS/bgCart.jpg'); /* Указываем путь к изображению */
+    background-size: cover; /* Заполняем контейнер изображением */
+    background-position: center; /* Центрируем изображение */
+    background-repeat: no-repeat; /* Избегаем повторения изображения */
+    min-height: 300px; /* Задаем минимальную высоту для правильного отображения */
+    color: #333; /* Цвет текста, чтобы он был читаемым */
+}
+.remove-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+
+
+
+
+.telegram-link {
+    display: flex; /* Выстраиваем иконку и текст в строку */
+    align-items: center; /* Центрируем элементы по вертикали */
+    text-decoration: none; /* Убираем подчеркивание */
+    color: white; /* Белый текст */
+    font-size: 14px; /* Уменьшенный размер текста */
+    font-weight: bold; /* Жирный текст */
+    padding: 4px 8px; /* Уменьшенные отступы внутри ссылки */
+    border-radius: 16px; /* Скругленные углы */
+    background-color: #164C8A; /* Цвет фона */
+    transition: background-color 0.3s ease; /* Эффект плавного изменения цвета */
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 180px; /* Уменьшенная ширина */
+    height: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    box-shadow: #111111;
+}
+
+.telegram-link:hover {
+    background-color: green; /* Более темный оттенок при наведении */
+}
+
+.telegram-icon {
+    width: 15px; /* Уменьшенный размер иконки */
+    height: 15px;
+    margin-right: 12px; /* Уменьшенный отступ между иконкой и текстом */
+}
+
+
+
+.parent{
+
+        display: flex;
+        justify-content: center; /* Центровка по горизонтали */
+
+    
+}
+
+
+
+

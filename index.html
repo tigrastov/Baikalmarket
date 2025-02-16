@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baikal</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=K2D:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/ASSETS/cart.png" type="image/png">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="/ASSETS/Logotip.png" alt="Baikal">
+        </div>
+
+        <nav class="nav">
+            <a href="index.html" class="currentMenu">Catalog</a>
+            <a href="cart.html">Cart(<span id="cart-count">0</span>)</a>
+            <a href="about.html"class="no-wrap">About Us</a>
+            <a href="info.html">Delivery Information & Contacts</a>
+            <a href="javascript:void(0);" onclick="toggleLanguageMenu()">Language</a>
+
+            <div id="languageMenu" class="language-menu">
+                <a href="javascript:void(0);" onclick="changeLanguage('ru')">Русский</a>
+                <a href="javascript:void(0);" onclick="changeLanguage('en')">English</a>
+                <a href="javascript:void(0);" onclick="changeLanguage('sr')">Srpski</a>
+            </div>
+        </nav>
+
+        <!-- Бургер-меню -->
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+    </header>
+
+    <div class="containerCatalog">
+        <div class="catalog-grid">
+            <!-- Пример карточек товаров -->
+            <div class="product-card">
+                <img src="/ASSETS/пельмениСвининаГовядина.png" alt="">
+                <h2>Пельмени: свинина/говядина</h2>
+                <p>Заморозка 1 кг</p>
+                <p><strong>1290 din</strong></p> 
+                <img src="/ASSETS/cart.png" class="add-to-cart" 
+     onclick="addToCart('Пельмени: свинина/говядина', 1290, '/ASSETS/пельмениСвининаГовядина.png')" 
+     alt="Добавить в корзину">
+            </div>
+            <div class="product-card">
+                <img src="/ASSETS/пельмениГовядина.png" alt="">
+                <h2>Пельмени: говядина</h2>
+                <p>Заморозка 1 кг</p>
+                <p><strong>1590 din</strong></p>
+                <img src="/ASSETS/cart.png" class="add-to-cart" 
+     onclick="addToCart('Пельмени: говядина', 1590, '/ASSETS/пельмениГовядина.png')" 
+     alt="Добавить в корзину">
+
+            </div>
+            <div class="product-card">
+                <img src="/ASSETS/вареникиТворог.png" alt="">
+                <h2>Вареники: творог</h2>
+                <p>Заморозка 1 кг</p>
+                <p><strong>1290 din</strong></p>
+                <img src="/ASSETS/cart.png" class="add-to-cart" 
+     onclick="addToCart('Вареники: творог', 1290, '/ASSETS/вареникиТворог.png')" 
+     alt="Добавить в корзину">
+
+            </div>
+            <div class="product-card">
+                <img src="/ASSETS/вареникиКартофельЛук.png" alt="">
+                <h2>Вареники: картофель/лук</h2>
+                <p>Заморозка 1 кг</p>
+                <p><strong>1190 din</strong></p>
+                <img src="/ASSETS/cart.png" class="add-to-cart" 
+     onclick="addToCart('Вареники: картофель/лук', 1190, '/ASSETS/вареникиКартофельЛук.png')" 
+     alt="Добавить в корзину">
+
+            </div>
+            <div class="product-card">
+                <img src="/ASSETS/вареникиКартофельГрибы.png" alt="">
+                <h2>Вареники: картофель/грибы</h2>
+                <p>Картофель/грибы(шампиньоны, белые). Заморозка 1 кг</p>
+                <p><strong>1390 din</strong></p>
+                <img src="/ASSETS/cart.png" class="add-to-cart" 
+     onclick="addToCart('Вареники: картофель/грибы', 1390, '/ASSETS/вареникиКартофельГрибы.png')" 
+     alt="Добавить в корзину">
+
+            </div>
+            <div class="product-card">
+                <img src="/ASSETS/вареникиВишня.png" alt="">
+                <h2>Вареник: вишня</h2>
+                <p>Заморозка 1 кг</p>
+                <p><strong>1290 din</strong></p>
+                <img src="/ASSETS/cart.png" class="add-to-cart" 
+     onclick="addToCart('Вареник: вишня', 1290, '/ASSETS/вареникиВишня.png')" 
+     alt="Добавить в корзину">
+
+            </div>
+            <div class="product-card">
+                <img src="/ASSETS/блиныЯблокоКорица.png" alt="">
+                <h2>Блины: яблоко/корица</h2>
+                <p>Упаковка 7 шт</p>
+                <p><strong>690 din</strong></p>
+                <img src="/ASSETS/cart.png" class="add-to-cart" 
+     onclick="addToCart('Блины: яблоко/корица', 690, '/ASSETS/блиныЯблокоКорица.png')" 
+     alt="Добавить в корзину">
+
+            </div>
+            <div class="product-card">
+                <img src="/ASSETS/блиныТворог.png" alt="">
+                <h2>Блины с творогом</h2>
+                <p>Упаковка 7 шт</p>
+                <p><strong>690 din</strong></p>
+                <img src="/ASSETS/cart.png" class="add-to-cart" 
+     onclick="addToCart('Блины с творогом', 690, '/ASSETS/блиныТворог.png')" 
+     alt="Добавить в корзину">
+
+            </div>
+            <div class="product-card">
+                <img src="/ASSETS/блиныКурицаГрибы.png" alt="">
+                <h2>Блины с курицей и грибами</h2>
+                <p>Упаковка 7 шт</p>
+                <p><strong>850 din</strong></p>
+                <img src="/ASSETS/cart.png" class="add-to-cart" 
+     onclick="addToCart('Блины с курицей и грибами', 850, '/ASSETS/блиныКурицаГрибы.png')" 
+     alt="Добавить в корзину">
+
+            </div>
+            <div class="product-card">
+                <img src="/ASSETS/морковьПоКорейски.png" alt="">
+                <h2>Морковь по-корейски</h2>
+                <p>Упаковка 250 грамм</p>
+                <p><strong>195 din</strong></p>
+                <img src="/ASSETS/cart.png" class="add-to-cart" 
+     onclick="addToCart('Морковь по-корейски', 195, '/ASSETS/морковьПоКорейски.png')" 
+     alt="Добавить в корзину">
+
+            <div class="product-card">
+                <img src="/ASSETS/Медовик.png" alt="">
+                <h2>Торт Медовик</h2>
+                <p>Целый торт 1 кг. По предзаказу</p>
+                <p><strong>2500 din</strong></p>
+                <img src="/ASSETS/cart.png" class="add-to-cart" 
+     onclick="addToCart('Торт Медовик', 2500, '/ASSETS/Медовик.png')" 
+     alt="Добавить в корзину">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="/JS/script.js"></script>
+    <script src="/JS/cart.js"></script>
+    
+</body>
+</html>
