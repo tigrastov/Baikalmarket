@@ -216,7 +216,7 @@ body {
     width: 30%;
     height: auto;
 }
-.textAbout{
+.textAbout {
     position: absolute;
     color: white;
     text-decoration: none;
@@ -225,6 +225,9 @@ body {
     left: 4%;
     top: 4%;  
     width: 50%;
+    background-color:rgba(0, 0, 0, 0.5) ;
+    border-radius: 20px;
+    padding: 1px;
 }
 @media (max-width: 768px) {
     .textAbout {
@@ -265,7 +268,7 @@ body {
 .uzbekIcons{
     position: absolute;
     right: 8%;
-    top: 10%;
+    top: 12%;
     width: 30%;
 }
 .plateContacts{
@@ -286,10 +289,14 @@ body {
     color: white;
     text-decoration: none;
     font-size: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
     left: 4%;
     top: 1%;  
     width: 33%;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 3px;
+    border-radius: 20px;
+
 }
 .contactsPlate{
     font-family: 'K2D', sans-serif;
@@ -464,7 +471,7 @@ body {
     text-align: center;
     background-image: url(ASSETS/berries.jpg);
     border-radius: 20px; /* Закругленные углы */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* Легкая тень */
     margin: 20px 0;
     width: 100%; /* Занимает всю ширину контейнера */
     height: 150px;
@@ -475,9 +482,10 @@ body {
     align-items: center;
 }
 
-.order-plate-inner-text {
+.order-plate-inner-text parent {
     font-family: 'K2D', sans-serif;
-    font-size: 14px;
+    font-size: 20px;
+    color: black;
     width: 60%;
     font-weight: bold;
     color: white;
@@ -621,9 +629,15 @@ body {
 
 
 .parent{
-
+        font-family: 'K2D', sans-serif;
+        font-size: 16px;
         display: flex;
         justify-content: center; /* Центровка по горизонтали */
+        color: white;
+        box-shadow: #111111;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+        padding: 1px;
 
     
 }
