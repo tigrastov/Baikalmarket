@@ -384,7 +384,7 @@ body {
     font-family: 'K2D', sans-serif;
     padding: 20px;
     text-align: center;
-    background-image: url(../ASSETS/bg.jpg);
+    background-image: url(ASSETS/bg.jpg);
 }
 
 .containerCatalog h1 {
@@ -462,7 +462,7 @@ body {
 
 .order-plate-text {
     text-align: center;
-    background-image: url(/ASSETS/berries.jpg);
+    background-image: url(ASSETS/berries.jpg);
     border-radius: 20px; /* Закругленные углы */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Легкая тень */
     margin: 20px 0;
@@ -570,7 +570,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-image: url('/ASSETS/bgCart.jpg'); /* Указываем путь к изображению */
+    background-image: url('ASSETS/bgCart.jpg'); /* Указываем путь к изображению */
     background-size: cover; /* Заполняем контейнер изображением */
     background-position: center; /* Центрируем изображение */
     background-repeat: no-repeat; /* Избегаем повторения изображения */
